@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+          margin: 0;
+          padding: 0
+        }
+  
+        @font-face {
+          font-family: Whitney;
+          font-weight: 600;
+          src: url("Whitneyfont.woff") format("woff");
+        }
+  
+        @font-face {
+          font-family: WhitneyMedium;
+          font-weight: 600;
+          src: url("Whitneymedium.woff") format("woff");
+        }
+  
+        body {
+          background-color: #313338
+        }
+
+        .image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.non-interactive-image {
+    pointer-events: none; /* Makes the image non-interactive */
+    user-select: none; /* Prevents text selection */
+    display: block; /* Ensures the image is treated as a block-level element */
+}
+
+.overlay-text {
+    position: absolute;
+    top: 124px; /* Adjust this value for vertical positioning */
+    left: 60px; /* Adjust this value for horizontal positioning */
+    color: #d2d2d2; /* Text color */
+    font-family: Whitney, sans-serif; /* Font family */
+    font-size: 20px; /* Font size */
+}
+
+.boost-text {
+    position: absolute;
+    top: 866px; /* Adjust this value for vertical positioning */
+    left: 150px; /* Adjust this value for horizontal positioning */
+    color: #ABACAD; /* Text color */
+    font-family: Whitney, sans-serif; /* Font family */
+    font-size: 18px; /* Font size */
+}
+
+.classic-text {
+    position: absolute;
+    top: 623px; /* Adjust this value for vertical positioning */
+    left: 150px; /* Adjust this value for horizontal positioning */
+    color: #ABACAD; /* Text color */
+    font-family: Whitney, sans-serif; /* Font family */
+    font-size: 18px; /* Font size */
+}
+      </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Over Image</title>
+</head>
+<body>
+    <div class="image-container">
+        <img src="https://images2.imgbox.com/fb/fb/ArXYaEUO_o.png" alt="A description of the image" class="non-interactive-image">
+        <div id="user_text" class="overlay-text">USERNAME</div>
+        <div id="user_text" class="boost-text">BOOSTAMOUNT copies</div>
+        <div id="user_text" class="classic-text">BASICAMOUNT copies</div>
+    </div>
+</body>
+</html>

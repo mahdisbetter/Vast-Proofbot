@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.non-interactive-image {
+    pointer-events: none; /* Makes the image non-interactive */
+    user-select: none; /* Prevents text selection */
+    display: block; /* Ensures the image is treated as a block-level element */
+}
+
+.overlay-text {
+    position: absolute;
+    top: 115px; /* Adjust this value for vertical positioning */
+    left: 50px; /* Adjust this value for horizontal positioning */
+    color: #d2d2d2; /* Text color */
+    font-family: Whitney, sans-serif; /* Font family */
+    font-size: 18px; /* Font size */
+}
+
+.boost-text {
+    position: absolute;
+    top: 352px; /* Adjust this value for vertical positioning */
+    left: 135px; /* Adjust this value for horizontal positioning */
+    color: #ABACAD; /* Text color */
+    font-family: Whitney, sans-serif; /* Font family */
+    font-size: 18px; /* Font size */
+}
+
+.classic-text {
+    position: absolute;
+    top: 570px; /* Adjust this value for vertical positioning */
+    left: 135px; /* Adjust this value for horizontal positioning */
+    color: #ABACAD; /* Text color */
+    font-family: Whitney, sans-serif; /* Font family */
+    font-size: 18px; /* Font size */
+}

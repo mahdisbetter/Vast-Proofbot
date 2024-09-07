@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+          margin: 0;
+          padding: 0
+        }
+  
+        @font-face {
+          font-family: Whitney;
+          font-weight: 600;
+          src: url("Agrandir-TextBold.otf") format("truetype");
+        }
+  
+        body {
+          background-color: #313338
+        }
+
+        .image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.non-interactive-image {
+    pointer-events: none; /* Makes the image non-interactive */
+    user-select: none; /* Prevents text selection */
+    display: block; /* Ensures the image is treated as a block-level element */
+}
+
+.overlay-text {
+    position: absolute;
+    top: 124px; /* Adjust this value for vertical positioning */
+    left: 60px; /* Adjust this value for horizontal positioning */
+    color: #E7E8E8; /* Text color */
+    font-family: Whitney, sans-serif; /* Font family */
+    font-size: 20px; /* Font size */
+}
+      </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Over Image</title>
+</head>
+<body>
+    <div class="image-container">
+        <img src="https://cdn.discordapp.com/attachments/1257037296931311617/1257615944491077683/screenshot.png?ex=66850d9e&is=6683bc1e&hm=9b88f1846e04a63eec3b99c6b5cc8985d6a5b56b789ca92df02de44525f499fc&" alt="A description of the image" class="non-interactive-image" width="360", height="806">
+        <div id="user_text" class="overlay-text">383.91</div>
+    </div>
+</body>
+</html>

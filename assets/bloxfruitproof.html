@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image and Text Overlay</title>
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f0f0f0
+      }
+
+      .container {
+        position: relative;
+        max-width: 100%
+      }
+
+      .container img {
+        width: 100%;
+        height: auto;
+        display: block;
+        filter: blur(2px);
+        image-rendering: auto
+      }
+
+      .overlay-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #D6C965;
+        font-size: 24px;
+        font-family: Arial, sans-serif;
+        font-weight: 650;
+        text-align: center;
+        max-width: 90%;
+        -webkit-text-stroke-width: 1.2px;
+        -webkit-text-stroke-color: black;
+        opacity: 0.9;
+        filter: blur(0.3px);
+        overflow: hidden;
+        white-space: nowrap
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img id="backgroundImage" src="" alt="Dynamic Background Image">
+      <div class="overlay-text">Received gift &lt;Permanent Kitsune&gt; from rachel0106r1!</div>
+    </div>
+    <script>
+      var backgroundImages = ['https://cdn.discordapp.com/attachments/1259073768496693298/1259585022571184280/image.png?ex=668c3777&is=668ae5f7&hm=a0aed5d940c75996cc650493ecb95a694e70f8537522d0a9dee19738a0ba7f32&', 'https://cdn.discordapp.com/attachments/1259073768496693298/1259583850019815444/image.png?ex=668c365f&is=668ae4df&hm=33df8e3f2fd956dfac3cb7aca9ac587b292878fecac9b0b4c1802f6134849539&', 'https://cdn.discordapp.com/attachments/1259073768496693298/1259583761578987653/image.png?ex=668c364a&is=668ae4ca&hm=c52b67e8f73cf4200a87634a36b341cbf7d4ec7d32247caf348ea1e51691330d&', 'https://cdn.discordapp.com/attachments/1259073768496693298/1259583730155126784/image.png?ex=668c3643&is=668ae4c3&hm=8960e6727dc6f1435ad2cd5187ff64558fc1195457d5616e3f5281ba2dece147&', 'https://cdn.discordapp.com/attachments/1259073768496693298/1259583512634458224/image.png?ex=668c360f&is=668ae48f&hm=e20e28f611ed29f24da20832defb2e3107525c47b0efa46c5b87cf31a125c86a&'];
+
+      function chooseRandomBackground() {
+        var randomIndex = Math.floor(Math.random() * backgroundImages.length);
+        document.getElementById("backgroundImage").src = backgroundImages[randomIndex];
+      }
+      chooseRandomBackground();
+    </script>
+  </body>
+</html>
