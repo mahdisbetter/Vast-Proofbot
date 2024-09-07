@@ -43,11 +43,10 @@ locale_to_timezone = {
 }
 
 def get_current_time_in_locale(interaction: discord.Interaction):
-    user_locale = interaction.locale  # Get the user's locale
-    timezone_str = locale_to_timezone.get(user_locale, 'UTC')  # Default to UTC if locale not found
+    user_locale = interaction.locale 
+    timezone_str = locale_to_timezone.get(user_locale, 'UTC') 
     timezone = pytz.timezone(timezone_str)
     
-    # Get the current time in the specified timezone
     current_time = datetime.datetime.now(timezone)
     return current_time
 
@@ -57,7 +56,6 @@ def generate_time_range(interaction):
     random_minutes = random.randint(2, 7)
     new_time = current_time + datetime.timedelta(minutes=random_minutes)
     
-    # Adjust if the new time minute exceeds 59
     if new_time.minute > 59:
         new_time = new_time.replace(hour=new_time.hour + 1, minute=new_time.minute % 60)
     
